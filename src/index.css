@@ -1,0 +1,22 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus
+input[type="number"]:active,
+input[type="number"]:focus {
+    outline: 1px solid #6cf;
+}
