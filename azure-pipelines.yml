@@ -15,7 +15,17 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- script:
+    npm init
+    npm install tslib@2.6.0
+  displayName: 'npm init and install'
+
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    npm --version
+  displayName: 'npm --version'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      Get-File node_modules/tslib/tslib.js
